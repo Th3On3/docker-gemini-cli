@@ -9,3 +9,18 @@ services:
     env_file:
       - ~/.env.gemini
     command: ["sleep", "infinity"]
+    profiles:
+      - global
+  gemini-cli:
+    image: naoyoshinori/gemini-cli:0-node
+    working_dir: /workspace
+    volumes:
+      - ~/.gitconfig:/home/node/.gitconfig
+      - .gemini:/home/node/.gemini:cached
+      - .:/workspace:cached
+    env_file:
+      - .env.gemini
+    command: ["sleep", "infinity"]
+    profiles:
+      - local
+    
