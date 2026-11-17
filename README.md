@@ -18,13 +18,15 @@ To get started quickly, ensure you have Docker installed and a Gemini API key.
     * [Gemini API Key](https://aistudio.google.com/app/apikey)
 
 2. **Initial Setup**:
-    **GLOBAL MODE**:
+   
+   **GLOBAL MODE**:
     In your **home directory**, create a `.env.gemini` file for your API key and a `.gemini` directory to persist chat history and settings.
 
     ```bash
     echo "GEMINI_API_KEY=YOUR_API_KEY_HERE" > ~/.env.gemini
     mkdir -p ~/.gemini
     ```
+    
     **LOCAL MODE**:
     Create a `.env.gemini` file for your API key and a `.gemini` directory to persist chat history and settings.
 
