@@ -1,26 +1,40 @@
 services:
   gemini-cli-global:
-    image: naoyoshinori/gemini-cli:0-node
+    image: gemini-cli:latest
+    container_name: gemini-cli-global
+    build:
+      context: ./gemini-cli
+      dockerfile: Dockerfile
     working_dir: /workspace
+    entrypoint: []
+    command: ["sleep", "infinity"]
+    stdin_open: true
+    tty: true
     volumes:
-      - ~/.gitconfig:/home/node/.gitconfig
+      - ~/.gitconfig:/home/node/.gitconfig:ro
       - ~/.gemini:/home/node/.gemini:cached
       - .:/workspace:cached
     env_file:
       - ~/.env.gemini
-    command: ["sleep", "infinity"]
     profiles:
       - global
+
   gemini-cli-local:
-    image: naoyoshinori/gemini-cli:0-node
+    image: gemini-cli:latest
+    container_name: gemini-cli-local
+    build:
+      context: ./gemini-cli
+      dockerfile: Dockerfile
     working_dir: /workspace
+    entrypoint: []
+    command: ["sleep", "infinity"]
+    stdin_open: true
+    tty: true
     volumes:
-      - ~/.gitconfig:/home/node/.gitconfig
-      - .gemini:/home/node/.gemini:cached
+      - ~/.gitconfig:/home/node/.gitconfig:ro
+      - ./.gemini:/home/node/.gemini:cached
       - .:/workspace:cached
     env_file:
       - .env.gemini
-    command: ["sleep", "infinity"]
     profiles:
       - local
-    
