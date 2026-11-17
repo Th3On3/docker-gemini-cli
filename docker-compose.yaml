@@ -1,5 +1,5 @@
 services:
-  gemini-cli:
+  gemini-cli-global:
     image: naoyoshinori/gemini-cli:0-node
     working_dir: /workspace
     volumes:
@@ -11,7 +11,7 @@ services:
     command: ["sleep", "infinity"]
     profiles:
       - global
-  gemini-cli:
+  gemini-cli-local:
     image: naoyoshinori/gemini-cli:0-node
     working_dir: /workspace
     volumes:
