@@ -51,6 +51,12 @@ To get started quickly, ensure you have Docker installed and a Gemini API key.
       gemini
     ```
     
+    or
+    
+    ```bash
+    docker compose --profile global up -d
+    ```
+    
     **LOCAL MODE**:
     ```bash
     docker run -it --rm \
@@ -61,7 +67,13 @@ To get started quickly, ensure you have Docker installed and a Gemini API key.
       naoyoshinori/gemini-cli:0-node \
       gemini
     ```
-
+    
+    or
+    
+    ```bash
+    docker compose --profile local up -d
+    ```
+    
     For more detailed instructions and other use cases, see the [**Getting Started Guide**](./docs/getting-started.md).
 
 ## Image Variants
