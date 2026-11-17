@@ -39,6 +39,7 @@ To get started quickly, ensure you have Docker installed and a Gemini API key.
 3. **Run Gemini CLI**:
 
     Execute the following command to start the Gemini CLI. It mounts your current directory and persists your settings and history.
+    
     **GLOBAL MODE**:
     ```bash
     docker run -it --rm \
@@ -49,6 +50,7 @@ To get started quickly, ensure you have Docker installed and a Gemini API key.
       naoyoshinori/gemini-cli:0-node \
       gemini
     ```
+    
     **LOCAL MODE**:
     ```bash
     docker run -it --rm \
