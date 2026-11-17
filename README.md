@@ -20,6 +20,7 @@ To get started quickly, ensure you have Docker installed and a Gemini API key.
 2. **Initial Setup**:
    
    **GLOBAL MODE**:
+   
     In your **home directory**, create a `.env.gemini` file for your API key and a `.gemini` directory to persist chat history and settings.
 
     ```bash
@@ -28,6 +29,7 @@ To get started quickly, ensure you have Docker installed and a Gemini API key.
     ```
     
     **LOCAL MODE**:
+    
     Create a `.env.gemini` file for your API key and a `.gemini` directory to persist chat history and settings.
 
     ```bash
